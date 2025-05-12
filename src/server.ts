@@ -5,13 +5,14 @@ import {
   writeResponseToNodeResponse,
 } from '@angular/ssr/node';
 import express from 'express';
-import { dirname, resolve } from 'node:path';
+import path, { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const serverDistFolder = dirname(fileURLToPath(import.meta.url));
 const browserDistFolder = resolve(serverDistFolder, '../browser');
 
 const app = express();
+app.use(express.static('public'));
 const angularApp = new AngularNodeAppEngine();
 
 /**
@@ -36,6 +37,8 @@ app.use(
     redirect: false,
   }),
 );
+
+app.get('/resume', (req, res) => { res.sendFile(path.join(__dirname, 'public', 'assets', 'AkashChatlaResume.docx')); });
 
 /**
  * Handle all other requests by rendering the Angular application.

@@ -1,1 +1,336 @@
 /* You can add global styles to this file, and also import other style files */
+a.active {
+  font-weight: bold;
+  color: #007bff; // or any color you prefer
+}
+
+.fullscreen-section {
+  height: 100vh;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  box-sizing: border-box;
+
+  @media (max-width: 576px) {
+    padding: 2rem;
+    font-size: 0.95rem;
+  }
+}
+
+.scrolling-text {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.scrolling-text p {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scroll-left 15s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+.hero-image-section {
+  height: 100vh;
+  background-image: url('assets/bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+} 
+
+.resume-section {
+  height: 100vh;
+  background: url('assets/resumebg.png') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 10%;
+  background-color: #87ceeb;
+}
+
+.content {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 50px;
+  color: white;
+  text-align: center;
+}
+
+
+.contact-section {
+  height: 100vh;
+  // background: url('assets/contactbg.png') no-repeat center center;
+  background: url('assets/contactbg.png') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.contact-box {
+  background-color: rgba(0, 0, 0, 0.6); // ✅ Semi-transparent black
+  color: #fff;
+  padding: 2rem 3rem;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.contact-box a {
+  color: #00cfff;
+  text-decoration: underline;
+}
+
+.about-section {
+  height: 100vh;
+  background: url('assets/aboutbg.png') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.about-box {
+  background-color: rgba(0, 0, 0, 0.6); // semi-transparent dark background
+  color: #fff;
+  padding: 2rem 3rem;
+  border-radius: 10px;
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.about-section {
+  height: 100vh;
+  background: url('assets/aboutbg.png') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.about-box {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.about-text {
+  text-align: left;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.about-bullets {
+  text-align: left;
+  line-height: 1.8;
+  padding-left: 1.2rem;
+}
+
+
+.fullscreen-section {
+  background: url('assets/abc.png') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.experience-container {
+  width: 100%;
+  max-width: 1200px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.carousel-inner {
+  height: auto;
+}
+
+.carousel-item {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-item.active {
+  display: flex !important;
+}
+
+.experience-box {
+  background-color: rgba(0, 0, 0, 0.85);
+  color: white;
+  max-width: 800px;
+  width: 90%;
+  padding: 40px 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.experience-box h4 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.experience-box p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-image: none; /* Remove default icon */
+  width: 40px;
+  height: 40px;
+  background-color: white; /* Solid white background */
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 16 16'%3E%3Cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 16 16'%3E%3Cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+}
+.carousel-control-next-icon {
+  transform: rotate(180deg);
+}
+
+.sticky-testimonials {
+  background: #f0f0f0;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.section-heading {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #333;
+}
+
+.note-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+}
+
+.note {
+  width: 280px;
+  min-height: 250px;
+  height: 100%;
+  padding: 20px;
+  color: #222;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 5px 8px 18px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.25s ease-in-out;
+  transform: rotate(var(--tilt, 0deg));
+}
+
+/* Hover effect: zoom & straighten */
+.note:hover {
+  transform: scale(1.03) rotate(0deg);
+}
+
+/* Color + Rotation: Now using --tilt variable */
+.note.green {
+  background-color: #aefac8;
+  --tilt: -3deg;
+}
+
+.note.yellow {
+  background-color: #fff89a;
+  --tilt: 2deg;
+}
+
+.note.blue {
+  background-color: #a5ecf9;
+  --tilt: -1.5deg;
+}
+
+.note.pink {
+  background-color: #ffc8dd;
+  --tilt: 2.5deg;
+}
+
+.note.peach {
+  background-color: #ffd6a5;
+  --tilt: -2.5deg;
+}
+
+.note.lavender {
+  background-color: #d0bfff;
+  --tilt: 1.5deg;
+}
+
+.note h5 {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: #111;
+}
+
+@media (max-width: 768px) {
+  .note-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .note {
+    transform: rotate(0deg) !important;
+  }
+}
+.note.cream {
+  background-color: #fffbe6;
+  transform: rotate(1deg);
+}
+.note.cream .btn {
+  background-color: #222;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.note.cream .btn:hover {
+  background-color: #000;
+}
+
