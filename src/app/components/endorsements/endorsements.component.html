@@ -1,0 +1,26 @@
+<section class="endorsements-container py-5">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-4" style="font-size: 2.5rem;">
+      🏆 Endorsements & Recognitions
+    </h2>
+    <p class="text-center text-muted mb-5">
+      A proud showcase of my certifications, awards, and contributions.
+    </p>
+
+    <!-- Grid Layout -->
+    <div class="endorsement-grid">
+      <div class="endorsement-card" *ngFor="let item of endorsements">
+        <!-- <div class="icon-circle mb-3 mx-auto">
+          <img [src]="item.icon" alt="icon" style="width: 32px; height: 32px;" />
+        </div> -->
+        <h5 class="fw-bold text-center mb-2">{{ item.title }}</h5>
+        <p class="text-muted small text-center mb-3">{{ item.description }}</p>
+        <div class="text-center mt-auto">
+          <a [href]="item.link" target="_blank" class="btn btn-dark btn-sm rounded-pill px-4 shadow-sm">
+            <i class="bi bi-eye-fill me-1"></i> View
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

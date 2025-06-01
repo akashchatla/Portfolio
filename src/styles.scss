@@ -74,7 +74,7 @@ a.active {
   color: #fff;
   padding: 2rem;
   border-radius: 12px;
-  max-width: 800px;
+  max-width: 1050px;
   width: 100%;
   text-align: center;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
@@ -161,7 +161,7 @@ a.active {
 .experience-box {
   background-color: rgba(0, 0, 0, 0.85);
   color: white;
-  max-width: 800px;
+  max-width: 950px;
   width: 90%;
   padding: 40px 30px;
   border-radius: 15px;
@@ -295,5 +295,210 @@ a.active {
     width: 90%;
     margin: 0 auto;
     transform: rotate(0deg) !important;
+  }
+}
+/* ========== Section Layout ========== */
+.endorsements-container {
+  padding: 2rem;
+  text-align: center;
+  background: linear-gradient(to right, #dbeafe, #e0f2fe, #ccfbf1);
+  // background: linear-gradient(135deg, #d4fc79, #96e6a1, #a0c4ff);
+  // background: linear-gradient(to right, #f7f7f7, #e2e8f0, #edf2f7);
+
+}
+
+.endorsements-container h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ========== Grid Layout ========== */
+.endorsement-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* ========== Card Styles ========== */
+.endorsement-card {
+  width: 280px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.endorsement-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* ========== Icon Circle (Top Badge/Icon) ========== */
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  background: #ffffff;
+  border-radius: 50%;
+  margin: 1rem auto 0.5rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* ========== Card Content ========== */
+.endorsement-info {
+  padding: 1rem;
+}
+
+.endorsement-info h4 {
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+
+.endorsement-info p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.endorsement-info button {
+  margin-top: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.endorsement-info button:hover {
+  background-color: #0056b3;
+}
+
+/* ========== Modal Styles ========== */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  position: relative;
+  max-width: 90vw;
+  max-height: 80vh;
+}
+
+.modal-content img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.endorsement-strict-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.endorsement-card {
+  width: 300px;               /* Fixed width for exactly 3 cards */
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.endorsement-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  background: #fff;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media screen and (max-width: 992px) {
+  .endorsement-card {
+    width: 90%; /* Stacks on smaller screens */
+  }
+}
+
+.endorsement-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 👈 exactly 3 columns */
+  gap: 1.5rem;
+  padding: 1rem 2rem;
+  justify-items: center;
+}
+
+/* Card styles */
+.endorsement-card {
+  width: 100%;
+  max-width: 300px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.endorsement-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  background: #ffffff;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 992px) {
+  .endorsement-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .endorsement-grid {
+    grid-template-columns: 1fr;
   }
 }

@@ -5,6 +5,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from './components/footer/footer.component';
+import { EndorsementsComponent } from "./components/endorsements/endorsements.component";
 
 @Component({
   selector: 'app-root',
